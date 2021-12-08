@@ -98,7 +98,7 @@ def func(rdd):
         dump(kmeans, 'kmeans' + str(args.batch_size) + '.pkl', compress=9)
 
 
-lines = ssc.socketTextStream("localhost", 6100)
+lines = ssc.socketTextStream("localhost", 6100)     #taking input from the stream
 
 lines.foreachRDD(func)
 
