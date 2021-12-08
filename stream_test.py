@@ -154,7 +154,7 @@ def func(rdd):
         count = 0
 
 
-lines = ssc.socketTextStream("localhost", 6100)
+lines = ssc.socketTextStream("localhost", 6100)     #taking input from the stream 
 
 lines.foreachRDD(func)
 
